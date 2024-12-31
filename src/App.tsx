@@ -28,6 +28,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <p className="flex flex-row p-1 text-lg">TEST</p>
     </>
   );
 }
