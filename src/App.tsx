@@ -1,16 +1,19 @@
-import { version } from "react";
 import "./styles/App.css";
+import Layout from "./Layout";
+import FirstPage from "./pages/first/FirstPage";
+import HomePage from "./pages/home/HomePage";
+import SecondPage from "./pages/second/SecondPage";
+import { Route, Routes } from "react-router";
 
 const App = () => {
   return (
-    <div className="flex h-full flex-col items-center justify-center gap-4">
-      <h1 className="text-5xl">Vite React 18 Starter Kit</h1>
-      <p className="text-3xl">{version}</p>
-      <p>
-        Edit <code>src/App.tsx</code> and save to test HMR
-      </p>
-      <p>{import.meta.env.VITE_NUM ?? 1}</p>
-    </div>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/first" element={<FirstPage />} />
+        <Route path="/second" element={<SecondPage />} />
+      </Route>
+    </Routes>
   );
 };
 
