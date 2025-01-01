@@ -1,3 +1,4 @@
+import { ROUTES } from "@src/constants/route";
 import { NavLink } from "react-router";
 
 const Header = () => {
@@ -5,36 +6,18 @@ const Header = () => {
     <header className="flex h-20 w-full items-center justify-center shadow">
       <nav>
         <ul className="flex flex-row items-center justify-center gap-10">
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "text-blue-500" : "text-gra-500"
-              }
-              to="/"
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "text-blue-500" : "text-gra-500"
-              }
-              to="/first"
-            >
-              First
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "text-blue-500" : "text-gra-500"
-              }
-              to="/second"
-            >
-              Second
-            </NavLink>
-          </li>
+          {ROUTES.map((route) => (
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "font-bold text-blue-500" : "text-black"
+                }
+                to={route.to}
+              >
+                {route.title}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

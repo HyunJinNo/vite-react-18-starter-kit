@@ -1,4 +1,4 @@
-<h1> Vite React 18 Starter Kit
+<h1>Vite React 18 Starter Kit</h1>
 
 <img src="./src/assets/home.png" />
 <br/>
