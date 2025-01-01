@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 const Header = () => {
   return (
-    <header className="flex h-20 w-full items-center justify-center bg-teal-100 shadow-lg">
+    <header className="flex h-20 w-full items-center justify-center shadow">
       <nav>
         <ul className="flex flex-row items-center justify-center gap-10">
           <li>
@@ -12,7 +12,7 @@ const Header = () => {
               }
               to="/"
             >
-              홈
+              Home
             </NavLink>
           </li>
           <li>

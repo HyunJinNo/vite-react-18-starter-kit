@@ -1,5 +1,9 @@
 const SecondPage = () => {
-  return <p>SecondPage</p>;
+  return (
+    <div className="flex h-full items-center justify-center">
+      <p>SecondPage</p>
+    </div>
+  );
 };
 
 export default SecondPage;
